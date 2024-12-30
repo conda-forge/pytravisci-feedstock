@@ -21,13 +21,11 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - cryptography
+    # Not listed but need to constraint cryptography<41
+    - cryptography <41
     - python >={{ python_min }}
     - requests
     - setuptools
-
-    # Might need this for rsa
-    - pyopenssl
 
 test:
   imports:
